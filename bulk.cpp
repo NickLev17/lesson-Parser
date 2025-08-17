@@ -65,8 +65,7 @@ public:
         {
             if (*iter == "{")
             {
-                data.erase(iter.base() - 1); // так как реверсивный итератор erase  не принимает, его нужно привести к норм форме
-                                             //  через base()-1
+                data.erase(iter.base() - 1);            
                 break;
             }
             temp.push_back(*iter);
@@ -95,9 +94,7 @@ public:
         {
             vectime.pop_back();
             data.push_back(str);
-
-            ///  cout << "BLOCK ";
-            extractPackage(); // можно так сделать, извлекли данные и записали в команду. потом эту команду в другую команду итд
+            extractPackage();
 
             return;
         }
